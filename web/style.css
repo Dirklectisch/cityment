@@ -1,28 +1,130 @@
+html, body {
+  height: 100%;
+}
+
 *, ul {
   margin: 0;
   padding: 0;
 }
 
-.main {
+a {
+   -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+}
+a:hover {
+  opacity: .6;
+}
+
+#main {
+  margin-right: 360px;
+  float: left;
+}
+
+#restart {
+  margin: 4em 0;
+  margin-left: 90px;
+  display: block;
 }
 
 #main ul {
   position: absolute;
-  left: 50%;
+  left: 40%;
+  top: 120px;
 }
 #main ul li {
+  background-color: #666;
   list-style-type: none;
-  height: 38px;
-  background-color: black;
-  margin-bottom: 8px;
+  height: 36px;
+  margin-bottom: 12px;
   position: relative;
+  cursor: pointer;
 }
 #main ul li .label {
   white-space: nowrap;
   position: relative;
-  color: black;
+  color: #222;
   font-size: 30px;
   font-family: Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  -text-transform: uppercase;
   padding: 0 6px;
+}
+#main ul li .score {
+  color: #999;
+  opacity: 0;
+  -webkit-transition: opacity .3s linear;
+  -moz-transition: opacity .3s linear;
+  margin: 0 8px;
+}
+#main ul li:hover .score { opacity: 1; }
+
+#main ul li.negative {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+#main ul li.positive {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+aside {
+  padding: 30px;
+  border-left: 1px solid #ccc;
+  background-color: #f2f2f2;
+  width: 300px;
+  right: 0;
+  min-height: 100%;
+  position: fixed;
+  z-index: 20;
+  opacity: 0.8;
+}
+
+h1 {
+  color: #222;
+  line-height: 2em;
+  font-size: 2em;
+  font-family: 'Philosopher', arial, serif;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: #666;
+  line-height: 1.5em;
+  font-family: 'Droid Serif', arial, serif;
+}
+
+.logobox {
+  position: absolute;
+  bottom: 80px;
+}
+.logobox img { float: left; clear: left; margin: 10px 0; }
+
+.newsitem {
+  margin: 25px;
+  float: left;
+}
+.newsitem .score {
+  display: block;
+  font-size: 3em;
+  line-height: 1em;
+  text-align: right;
+  padding-right: 12px;
+  color: #036;
+  float: left;
+  width: 130px;
+  opacity: 0.7;
+   -webkit-transition: opacity .3s linear;
+  -moz-transition: opacity .3s linear;
+}
+.newsitem:hover .score { opacity: 1; }
+.newsitem h2 {
+  margin: 4px 0;
+}
+.newsitem p {
+  color: #ccc;
+  display: table;
+   -webkit-transition: color .3s linear;
+  -moz-transition: color .3s linear;
+}
+.newsitem:hover p {
+  color: #666;
 }

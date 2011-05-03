@@ -5,17 +5,43 @@
   <title>Cityment</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <script id="newsitem" type="text/x-jquery-tmpl">
+    <div class="newsitem">
+      <span class="score">${Math.round(doc.score*100)/100}</span>
+      <h2>${doc.title}</h2>
+      <p>${doc.excerpt}[...]</p>
+    </div>
+  </script>
+
   <div id="main">
+    <a id="restart" href="">&laquo; terug naar beginpagina</a>
+
     <ul>
       <li></li>
     </ul>
   </div>
+  <aside>
+    <h1><a href="">Cityment</a></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="logobox">
+      <a href="http://www.appsforamsterdam.nl"><img src="appsforadam.png" alt="Apps for Amsterdam" /></a>
+      <a href="http://www.at5.nl"><img src="at5.png" alt="Logo AT5" /></a>
+    </div>
+  </aside>
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <!-- <script src="raphael-js.js" />
-  <script src="g.raphael-min.js" />
-  <script src="g.pie-min.js" /> -->
+  <script src="http://grepsy.cloudant.com/_utils/script/jquery.couch.js"></script>
+  <script src="  http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
   <script src="export.js"></script>
   <script src="cityment.js"></script>
 </body>
